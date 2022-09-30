@@ -1,0 +1,96 @@
+:root {
+	--color: #ec6327;
+	--lGray: #f4f4f4;
+	--dGray: #878787;
+	--pad: 15px;
+	--gradient: linear-gradient(45deg, #d64d11 , #ff793d)
+}
+
+@font-face {
+	font-family: typeface;
+	src: url(typeface.woff2) format(woff2),
+		url(typeface.woff) format(woff);
+}
+
+body {
+	margin: 0;
+	font-family: typeface;
+	position: fixed;
+	height: 100%;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 77px;
+	background-color: var(--lGray);
+	border-bottom: 3px solid var(--color);
+}
+
+img {
+	border-radius: 100%;
+	height: 60px;
+}
+
+nav div {
+	float: left;
+	display: flex;
+	height: 100%;
+	padding: 0 20px;
+	align-items: center;
+	text-align: center;
+	line-height: 10px;
+	font-size: 16px;
+}
+
+.page a {
+	text-decoration: none;
+	color: var(--dGray);
+}
+
+.curr, .page:hover {
+	background-color: #ebebeb;
+}
+
+.curr a {
+	font-weight: bold;
+	color: var(--color);
+}
+
+#container {
+	margin: 95px 30px 0;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 #00000063;
+	height: 100%;
+	background-color: var(--lGray);
+}
+
+#title {
+	border-radius: 10px 10px 0 0;
+	margin: 0;
+	padding: var(--pad);
+	background-image: var(--gradient);
+	color: #fff;
+}
+
+#container .section {
+	padding: var(--pad);
+	color: #000;
+}
+
+#footer {
+	height: 15px;
+	padding: var(--pad);
+	background-color: var(--color);
+	text-align: center;
+	color: #fff;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	font-size: 15px;
+}
+
+#footer a {
+	color: #fff;
+}
