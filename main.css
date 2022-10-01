@@ -16,8 +16,6 @@
 body {
 	margin: 0;
 	font-family: typeface;
-	position: fixed;
-	height: 100%;
 }
 
 nav {
@@ -29,9 +27,8 @@ nav {
 	border-bottom: 3px solid var(--color);
 }
 
-img {
-	border-radius: 100%;
-	height: 60px;
+nav img {
+	height: 50px;
 }
 
 nav div {
@@ -45,57 +42,29 @@ nav div {
 	font-size: 16px;
 }
 
-.page a {
-	text-decoration: none;
+#container {
+	margin: 110px 20% 0;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: 30px;
+}
+
+#profile {
+/*	grid-column: 1;*/
+}
+
+#profile img {
+	border-radius: 100%;
+}
+
+#profile a {
 	color: var(--dGray);
 }
 
-.curr, .page:hover {
-	background-color: var(--lGray);
-}
-
-.curr a {
-	font-weight: bold;
-	color: var(--color);
-}
-
-#container {
-	margin: 95px 30px 0;
+#content {
+/*	grid-column: 2;*/
+	padding: 30px;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px 0 #00000063;
-	height: 100%;
 	background-color: var(--lGray);
-}
-
-#title {
-	border-radius: 10px 10px 0 0;
-	margin: 0;
-	padding: var(--pad);
-	background-image: var(--gradient);
-	color: #fff;
-}
-
-.section {
-	padding: var(--pad);
-	color: #000;
-}
-
-.section h3 {
-	color: var(--color);
-}
-
-#footer {
-	height: 15px;
-	padding: var(--pad);
-	background-color: var(--color);
-	text-align: center;
-	color: #fff;
-	position: fixed;
-	width: 100%;
-	bottom: 0;
-	font-size: 15px;
-}
-
-#footer a {
-	color: #fff;
 }
