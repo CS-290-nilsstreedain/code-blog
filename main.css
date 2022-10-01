@@ -1,10 +1,9 @@
 :root {
-	--color: #ec6327;
+	--accent: #737239;
 	--lGray: #f4f4f4;
 	--mGray: #ebebeb;
 	--dGray: #878787;
-	--pad: 15px;
-	--gradient: linear-gradient(45deg, #d64d11 , #ff793d)
+	--pad: 30px;
 }
 
 @font-face {
@@ -14,7 +13,11 @@
 }
 
 body {
-	margin: 0;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: var(--pad);
+	margin: calc(3 * var(--pad)) 5% 0;
+	background-color: var(--lGray);
 	font-family: typeface;
 }
 
@@ -22,49 +25,61 @@ nav {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	height: 77px;
-	background-color: var(--mGray);
-	border-bottom: 3px solid var(--color);
+	left: 0;
+	height: 57px;
+	background-color: var(--lGray);
+	border-bottom: 3px solid var(--mGray);
 }
 
-nav img {
-	height: 50px;
-}
-
-nav div {
+nav div, nav a {
 	float: left;
 	display: flex;
 	height: 100%;
-	padding: 0 20px;
 	align-items: center;
-	text-align: center;
-	line-height: 10px;
-	font-size: 16px;
+	justify-content: center;
+	width: calc(5 * var(--pad));
 }
 
-#container {
-	margin: 110px 20% 0;
-	display: grid;
-	grid-template-columns: auto auto auto auto;
-	grid-gap: 30px;
+#navSpace {
+	width: calc(5% + 250px + var(--pad));
 }
 
-#profile {
-/*	grid-column: 1;*/
-}
-
-#profile img {
-	border-radius: 100%;
-}
-
-#profile a {
+.page, #profile a {
+	text-decoration: none;
 	color: var(--dGray);
 }
 
-#content {
-/*	grid-column: 2;*/
-	padding: 30px;
+.curr {
+	font-weight: bold;
+	color: var(--accent);
+	border-bottom: 3px solid var(--accent);
+}
+
+.curr, .page:hover {
+	background-color: var(--mGray);
+}
+
+#profile, #profile img {
+	width: 250px;
+}
+
+#profile img {
+	position: absolute;
+	border-radius: 100%;
+}
+
+#profile h1 {
+	margin: calc(250px + var(--pad)) 0 0;
+}
+
+#profile a {
+	font-size: 1.17em;
+}
+
+main {
+	padding: var(--pad);
+	width: 100%;
 	border-radius: 10px;
-	box-shadow: 0 4px 8px 0 #00000063;
-	background-color: var(--lGray);
+	box-shadow: 0 4px 8px 0 var(--mGray);
+	background-color: #fff;
 }
