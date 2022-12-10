@@ -41,10 +41,6 @@ nav div, nav a {
 	width: calc(5 * var(--pad));
 }
 
-#navSpace {
-	width: calc(5% + 250px + var(--pad));
-}
-
 .page, #profile a {
 	text-decoration: none;
 	color: var(--dGray);
