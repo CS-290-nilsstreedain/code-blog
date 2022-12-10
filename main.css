@@ -29,6 +29,7 @@ nav {
 	height: 57px;
 	background-color: var(--lGray);
 	border-bottom: 3px solid var(--mGray);
+	overflow: visible;
 }
 
 nav div, nav a {
@@ -78,8 +79,13 @@ nav div, nav a {
 
 main {
 	padding: var(--pad);
+	padding-top: 0;
 	width: 100%;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px 0 var(--mGray);
 	background-color: #fff;
+}
+
+main h2 {
+	padding-top: 30px;
 }
